@@ -16,7 +16,7 @@ app.set('port', (process.env.PORT || 5000));
 app.listen(app.get('port'));
 
 app.use(xhub({ algorithm: 'sha1', secret: 'token' }));
-app.use(bodyParser.json());
+app.use(bodyParser());
 app.use(methodOverride());
 
 var token = process.env.TOKEN || 'token';
