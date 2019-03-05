@@ -15,7 +15,7 @@ var methodOverride = require('method-override')
 app.set('port', (process.env.PORT || 5000));
 app.listen(app.get('port'));
 
-app.use(xhub({ algorithm: 'sha1', secret: process.env.APP_SECRET }));
+app.use(xhub({ algorithm: 'sha1', secret: 'token' }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 
